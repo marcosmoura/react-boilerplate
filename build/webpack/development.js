@@ -6,13 +6,16 @@ import baseWebpackConfig from './base'
 import config from '../config'
 
 Object.keys(baseWebpackConfig.entry).forEach((name) => {
-  baseWebpackConfig.entry[name] = ['./build/server/client', ...[baseWebpackConfig.entry[name]]]
+  baseWebpackConfig.entry[name] = [
+    'react-hot-loader/patch',
+    'webpack-hot-middleware/client',
+    ...[baseWebpackConfig.entry[name]]
+  ]
 })
 
 export default merge(baseWebpackConfig, {
-  debug: true,
   cache: true,
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -29,6 +32,7 @@ export default merge(baseWebpackConfig, {
     }),
     new webpack.WatchIgnorePlugin([config.nodePath]),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',

@@ -53,6 +53,7 @@
     "optimize-js-plugin": "^0.0.4",
     "ora": "^1.2.0",
     "react-addons-test-utils": "^15.4.2",
+    "react-hot-loader": "next",
     "sass-loader": "^6.0.3",
     "url-loader": "^0.5.8",
     "webpack": "^2.3.2",

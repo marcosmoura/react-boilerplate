@@ -1,10 +1,26 @@
 /* Third Party */
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
+import { AppContainer } from 'react-hot-loader';
 
 /* App */
+import App from './App'
 import './config'
 import './core'
-import App from './App'
 
-ReactDOM.render(<App />, document.getElementById('app'))
+const renderComponent = Component => {
+  render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById('app')
+  );
+};
+
+renderComponent(App);
+
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    renderComponent(require('./App').default);
+  });
+}

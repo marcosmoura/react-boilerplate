@@ -14,15 +14,12 @@ const rootPath = path.join(__dirname, '..', '..')
 const devMiddlewareInstance = devMiddleware(compiler, {
   publicPath: config.publicPath,
   index: config.indexPath,
-  noInfo: true,
-  stats: {
-    colors: true
-  },
+  quiet: true,
   historyApiFallback: true
 })
 
 const hotMiddlewareInstance = hotMiddleware(compiler, {
-  log() { }
+  log: false
 })
 
 compiler.plugin('compilation', (compilation) => {

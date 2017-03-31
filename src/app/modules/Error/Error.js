@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './Error.scss'
 
 export default class ErrorPage extends Component {
   render() {
