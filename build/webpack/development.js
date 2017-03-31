@@ -10,7 +10,9 @@ Object.keys(baseWebpackConfig.entry).forEach((name) => {
 })
 
 export default merge(baseWebpackConfig, {
-  devtool: 'source-map',
+  debug: true,
+  cache: true,
+  devtool: 'cheap-module-eval-source-map',
   module: {
     rules: [
       {
