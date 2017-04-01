@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+import CSSModules from 'react-css-modules';
+import styles from './Home.scss'
 
-export default class Home extends Component {
+class Home extends Component {
   render() {
     return (
-      <div className="main-content">
+      <div styleName="main-content">
         <h1>Home</h1>
       </div>
     )
   }
 }
+
+export default CSSModules(Home, styles);

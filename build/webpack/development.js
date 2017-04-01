@@ -20,7 +20,12 @@ export default merge(baseWebpackConfig, {
     rules: [
       {
         test: /\.scss$/,
-        use: ['css-loader', 'sass-loader']
+        use: [
+          'style-loader?sourceMap',
+          'css-loader?modules&importLoaders=1&localIdentName=[local]-[hash:base64:8]',
+          'resolve-url-loader',
+          'sass-loader?sourceMap'
+        ]
       }
     ]
   },

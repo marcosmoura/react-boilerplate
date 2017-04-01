@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+import CSSModules from 'react-css-modules';
+import styles from './Error.scss'
 
-export default class ErrorPage extends Component {
+class ErrorPage extends Component {
   render() {
     return (
-      <div className="main-content">
-        <h1>Error</h1>
+      <div styleName="main-content">
+        <h1>Error 404</h1>
       </div>
     )
   }
 }
+
+export default CSSModules(ErrorPage, styles);

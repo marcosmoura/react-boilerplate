@@ -22,15 +22,9 @@ export default merge(baseConfig, {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          use: 'css-loader'
-        })
-      },
-      {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
-          use: 'css-loader!sass-loader'
+          use: 'css?modules&importLoaders=1&localIdentName=[local]-[hash:base64:8]!resolve-url!sass',
         })
       }
     ]
