@@ -9,7 +9,7 @@ Object.keys(baseWebpackConfig.entry).forEach((name) => {
   baseWebpackConfig.entry[name] = [
     'react-hot-loader/patch',
     'webpack-hot-middleware/client',
-    ...[baseWebpackConfig.entry[name]]
+    ...baseWebpackConfig.entry[name]
   ]
 })
 
