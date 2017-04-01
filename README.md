@@ -9,7 +9,7 @@
 - [ ] React Redux
 - [X] React Router
 - [ ] React Router Redux
-- [ ] Fetch API
+- [X] Fetch API
 - [ ] Flow Type
 - [ ] React Intl
 - [X] Hotreload
