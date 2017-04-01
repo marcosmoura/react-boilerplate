@@ -1,13 +1,24 @@
-# react-boilerplate
+# react-boilerplate (WIP)
 
 > An opinionated React.js boilerplate
 
-## Tools
-* React.js
-* React Router
-* SASS with Autoprefixer
-* AVA Tests
-* Istanbul Coverage
+## Progress
+- [X] Webpack 2
+- [X] ESLint
+- [X] React.js
+- [ ] React Redux
+- [X] React Router
+- [ ] React Router Redux
+- [ ] Fetch API
+- [ ] Flow Type
+- [ ] React Intl
+- [X] Hotreload
+- [X] SASS with Autoprefixer
+- [X] CSS Modules
+- [X] AVA Tests
+- [X] Code Coverage
+- [ ] Offline Support
+- [ ] Server-Side Rendering
 
 ## Installation
 
