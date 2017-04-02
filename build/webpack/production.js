@@ -23,7 +23,7 @@ export default merge(baseConfig, {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
-          use: 'css?modules&importLoaders=1&localIdentName=[local]-[hash:base64:8]!resolve-url!sass',
+          use: 'css-loader?modules&importLoaders=1&localIdentName=[local]-[hash:base64:8]!resolve-url-loader!sass-loader'
         })
       }
     ]

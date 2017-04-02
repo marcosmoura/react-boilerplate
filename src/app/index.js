@@ -1,7 +1,7 @@
 /* Third Party */
 import React from 'react'
 import { render } from 'react-dom'
-import { AppContainer } from 'react-hot-loader';
+import { AppContainer } from 'react-hot-loader'
 
 /* App */
 import App from './App'
@@ -14,13 +14,13 @@ const renderComponent = Component => {
       <Component />
     </AppContainer>,
     document.getElementById('app')
-  );
-};
+  )
+}
 
-renderComponent(App);
+renderComponent(App)
 
 if (module.hot) {
   module.hot.accept('./App', () => {
-    renderComponent(require('./App').default);
-  });
+    renderComponent(require('./App').default)
+  })
 }

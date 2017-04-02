@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CSSModules from 'react-css-modules';
+import CSSModules from 'react-css-modules'
 import styles from './Error.scss'
 
 class ErrorPage extends Component {
@@ -12,4 +12,4 @@ class ErrorPage extends Component {
   }
 }
 
-export default CSSModules(ErrorPage, styles);
+export default CSSModules(ErrorPage, styles)

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CSSModules from 'react-css-modules';
+import CSSModules from 'react-css-modules'
 import styles from './Home.scss'
 
 class Home extends Component {
@@ -12,4 +12,4 @@ class Home extends Component {
   }
 }
 
-export default CSSModules(Home, styles);
+export default CSSModules(Home, styles)
